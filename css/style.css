@@ -78,7 +78,7 @@ a {
   height: 0.3rem;
   margin: 0.5rem auto;
   transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: var(--text-color);
 }
 
 #banner-container {
@@ -135,8 +135,13 @@ a {
   gap: 3rem;
 }
 
-.media-container a i {
+.media-container a {
   font-size: 3rem;
+  transition: transform 0.3s;
+}
+
+.media-container a:hover {
+  transform: scale(1.1);
 }
 
 #about-container {
@@ -160,6 +165,11 @@ a {
 #about-container p {
   font-size: 1.8rem;
   line-height: 2.5rem;
+}
+
+#about-container p a {
+  color: var(--text-secondary-color);
+  text-decoration: underline;
 }
 
 #projects-container {
@@ -230,15 +240,40 @@ a {
 }
 
 #footer {
-  height: 200px;
   background: linear-gradient(90deg, rgb(20, 30, 49) 60%, rgb(35, 57, 84) 98%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #footer p {
   color: var(--text-color);
+  align-self: center;
+  margin-bottom: 3rem;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 5rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container h3 {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+}
+
+.contact-container ul {
+  list-style: none;
+}
+
+.contact-container ul li {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -292,6 +327,7 @@ a {
   #about-container {
     width: 90%;
     margin: 0 auto;
+    padding: 80px 0;
   }
 
   #projects-container {

@@ -1,21 +1,15 @@
-const hamburger = document.querySelector(".hamburger");
+const hamburgerMenu = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navbar-menu");
+const navLinks = document.querySelectorAll(".navbar-link");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
+hamburgerMenu.addEventListener("click", () => {
+  hamburgerMenu.classList.toggle("active");
   navMenu.classList.toggle("active");
 });
 
-// Versão pra toque por touch screen
-hamburger.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-document.querySelectorAll(".navbar-link").forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
+    hamburgerMenu.classList.remove("active");
     navMenu.classList.remove("active");
   });
 });
