@@ -1,5 +1,6 @@
 :root {
   --primary-color: #f9f9f9;
+  --secondary-color: #141e31;
   --text-color: #202020;
   --text-secondary-color: #fff;
 }
@@ -205,12 +206,15 @@ a {
   text-decoration: none;
   padding: 5px 8px;
   border-radius: 5px;
-  background-color: rgb(35, 57, 84);
+  background-color: var(--secondary-color);
+  border: 1px solid transparent;
   transition: 0.3s;
 }
 
 .action-buttons a:hover {
-  background-color: rgb(20, 30, 49, 1);
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
 }
 
 .project-tools {
@@ -232,7 +236,7 @@ a {
 }
 
 #footer {
-  background-color: #141e31;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
