@@ -136,38 +136,50 @@ a {
 
 .media-container {
   margin-top: 1rem;
-  display: flex;
-  gap: 2rem;
 }
 
-.media-container a {
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--text-color);
+.media-container,
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.media-container a,
+.action-buttons a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
   border-radius: 5px;
+  background-color: var(--secondary-color);
+  border: 1px solid transparent;
   transition: 0.3s;
 }
 
-.media-container a:hover {
-  transform: scale(1.1);
+.media-container a:hover,
+.action-buttons a:hover {
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
 }
 
 #projects-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 100px;
+  margin-bottom: 6rem;
   border-top: 1px solid var(--text-color);
 }
 
 #projects-container h2 {
+  font-size: 2.5rem;
   text-align: center;
-  margin: 5rem 0;
+  margin: 6rem 0;
+  padding: 0 2rem;
 }
 
 .projects-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 .projects-content:last-child {
@@ -178,7 +190,6 @@ a {
   display: flex;
   justify-content: center;
   gap: 8rem;
-  margin: 2rem 0;
   padding: 0 2rem;
 }
 
@@ -199,25 +210,7 @@ a {
 }
 
 .action-buttons {
-  display: flex;
-  gap: 8px;
   flex-wrap: wrap;
-}
-
-.action-buttons a {
-  color: var(--text-secondary-color);
-  text-decoration: none;
-  padding: 5px 8px;
-  border-radius: 5px;
-  background-color: var(--secondary-color);
-  border: 1px solid transparent;
-  transition: 0.3s;
-}
-
-.action-buttons a:hover {
-  color: var(--text-color);
-  background-color: transparent;
-  border: 1px solid var(--secondary-color);
 }
 
 .project-tools {
@@ -236,6 +229,38 @@ a {
 
 .project-tools ul li {
   margin-bottom: 1rem;
+}
+
+#courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+  border-top: 1px solid var(--text-color);
+}
+
+#courses-container h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 6rem 0;
+}
+
+.courses-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.course {
+  min-width: 200px;
+  background-color: var(--secondary-color);
+  color: var(--text-secondary-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 #footer {
@@ -318,7 +343,16 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    padding: 0;
+  }
+
+  .info-container h1,
+  .info-container p {
     padding: 0 2rem;
+  }
+
+  .media-container {
+    justify-content: center;
   }
 
   #projects-container {
@@ -326,7 +360,7 @@ a {
   }
 
   .projects-content {
-    margin-bottom: 0;
+    margin-bottom: 3rem;
   }
 
   .project {
@@ -343,5 +377,9 @@ a {
   .project-tools {
     align-self: flex-start;
     width: 100%;
+  }
+
+  .course {
+    min-width: 280px;
   }
 }
