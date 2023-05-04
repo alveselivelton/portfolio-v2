@@ -203,6 +203,11 @@ a {
   width: 520px;
   height: 280px;
   box-shadow: -1px 1px 2px 2px #ccc;
+  transition: 0.3s;
+}
+
+.project-info img:hover {
+  transform: scale(103%);
 }
 
 .project-info h4 {
@@ -308,6 +313,8 @@ a {
 .contact-container ul li {
   color: var(--text-secondary-color);
   margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
