@@ -2,14 +2,15 @@
   --primary-color: #f9f9f9;
   --secondary-color: #141e31;
   --text-color: #202020;
+  --border-color: #202020;
   --text-secondary-color: #fff;
-  --label-color: #111;
 }
 
 .dark:root {
-  --primary-color: #1c1e21;
-  --secondary-color: #080808;
-  --text-color: #e2e0e0;
+  --primary-color: #121212;
+  --secondary-color: #313131;
+  --text-color: #f9f8f8;
+  --border-color: #505050;
 }
 
 * {
@@ -56,7 +57,7 @@ a {
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar {
@@ -95,7 +96,7 @@ a {
 .navbar-logo:hover,
 .navbar-link:hover {
   opacity: 0.8;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .checkbox {
@@ -103,7 +104,7 @@ a {
 }
 
 .label {
-  background-color: var(--label-color);
+  background-color: var(--secondary-color);
   border-radius: 5rem;
   cursor: pointer;
   display: flex;
@@ -234,7 +235,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 6rem;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--border-color);
 }
 
 #projects-container h2 {
@@ -308,7 +309,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 10rem;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--border-color);
 }
 
 #courses-container h3 {
@@ -329,7 +330,7 @@ a {
   background-color: var(--secondary-color);
   color: var(--text-secondary-color);
   border-radius: 0.5rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--border-color);
   padding: 1.3rem;
   display: flex;
   flex-direction: column;
