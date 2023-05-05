@@ -3,6 +3,13 @@
   --secondary-color: #141e31;
   --text-color: #202020;
   --text-secondary-color: #fff;
+  --label-color: #111;
+}
+
+.dark:root {
+  --primary-color: #1c1e21;
+  --secondary-color: #080808;
+  --text-color: #e2e0e0;
 }
 
 * {
@@ -25,6 +32,15 @@ body {
   background-color: var(--primary-color);
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  color: var(--text-color);
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -32,9 +48,10 @@ a {
 
 #header {
   position: fixed;
+  z-index: 10;
   top: 0;
   width: 100%;
-  height: 90px;
+  height: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,9 +76,13 @@ a {
 .navbar-menu {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 2.5rem;
   font-size: 1.8rem;
   list-style: none;
+}
+
+.navbar-item:last-child {
+  margin-left: 1.75rem;
 }
 
 .navbar-link,
@@ -75,6 +96,53 @@ a {
 .navbar-link:hover {
   opacity: 0.8;
   border-bottom: 1px solid var(--text-color);
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  background-color: var(--label-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  position: relative;
+  height: 2.2rem;
+  width: 4.6rem;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: var(--text-secondary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 1.8rem;
+  width: 1.8rem;
+  transform: translateX(0);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon,
+.fa-sun {
+  font-size: 1.4rem;
+}
+
+.fa-moon {
+  color: #dad4d4;
+}
+
+.fa-sun {
+  color: #f3a528;
 }
 
 .hamburger {
@@ -342,6 +410,7 @@ a {
   }
 
   .navbar-menu {
+    padding: 2rem 0;
     background-color: var(--primary-color);
     position: fixed;
     left: -100%;
@@ -358,7 +427,8 @@ a {
   }
 
   .navbar-item:last-child {
-    margin-bottom: 2.6rem;
+    margin-left: 0;
+    margin-top: 2.5rem;
   }
 
   .navbar-menu.active {
