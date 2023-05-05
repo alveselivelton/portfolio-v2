@@ -317,6 +317,15 @@ a {
   gap: 1rem;
 }
 
+.contact-container ul li a {
+  color: var(--text-secondary-color);
+  transition: 0.3s;
+}
+
+.contact-container ul li a:hover {
+  transform: scale(103%);
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
