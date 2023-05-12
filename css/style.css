@@ -82,9 +82,9 @@ a {
   list-style: none;
 }
 
-.navbar-item:last-child {
+/* .navbar-item:last-child {
   margin-left: 1.75rem;
-}
+} */
 
 .navbar-link,
 .navbar-logo {
@@ -112,9 +112,8 @@ a {
   justify-content: space-between;
   padding: 0.5rem;
   position: relative;
-  height: 2.2rem;
-  width: 4.6rem;
-  transform: scale(1.5);
+  height: 2.6rem;
+  width: 5.2rem;
 }
 
 .label .ball {
@@ -123,19 +122,13 @@ a {
   position: absolute;
   top: 2px;
   left: 2px;
-  height: 1.8rem;
-  width: 1.8rem;
-  transform: translateX(0);
-  transition: transform 0.2s linear;
+  height: 2.2rem;
+  width: 2.2rem;
+  transition: transform 0.3s linear;
 }
 
 .checkbox:checked + .label .ball {
-  transform: translateX(24px);
-}
-
-.fa-moon,
-.fa-sun {
-  font-size: 1.4rem;
+  transform: translateX(2.6rem);
 }
 
 .fa-moon {
@@ -425,11 +418,6 @@ a {
 
   .navbar-item {
     margin: 1.6rem 0;
-  }
-
-  .navbar-item:last-child {
-    margin-left: 0;
-    margin-top: 2.5rem;
   }
 
   .navbar-menu.active {
